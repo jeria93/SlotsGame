@@ -8,14 +8,46 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Spacer()
+            Text("SwiftUI Slots Game")
+                .font(.largeTitle)
+            
+            Spacer()
+            
+            Text("Score/Credits")
+            Spacer()
+            HStack {
+                
+                Image("001-banana")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                
+                Image("001-banana")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                
+                Image("001-banana")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                
+            }.padding()
+            
+            Spacer()
+            Button("Spin the slot!") {
+                print("Spinned")
+            }
+            .buttonStyle(.bordered)
+            .background(Color.yellow)
+            .clipShape(Capsule())
+            .shadow(radius: 5)
+            Spacer()
+            
         }
-        .padding()
+        
     }
 }
 
